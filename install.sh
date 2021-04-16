@@ -1,7 +1,5 @@
 #!/bin/bash
-
-# dotfiles retrieval
-git clone https://github.com/vibhaa/dotfiles.git
+# assume repo has been cloned
 
 # zsh
 sudo apt install zsh
@@ -10,11 +8,11 @@ chsh -s $(which zsh)
 # invariably shell won't be changed and might need you to run sudo vi /etc/passwd instead and change it
 
 # copy dotfiles
-cp dotfiles/bashrc ~/.bashrc
-cp dotfiles/gitconfig ~/.gitconfig
-cp dotfiles/tmux.conf ~/.tmux.conf
-cp dotfiles/vimrc ~/.vimrc
-cp dotfiles/zshrc ~/.zshrc
+cp bashrc ~/.bashrc
+cp gitconfig ~/.gitconfig
+cp tmux.conf ~/.tmux.conf
+cp vimrc ~/.vimrc
+cp zshrc ~/.zshrc
 
 # install vim plugins
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
